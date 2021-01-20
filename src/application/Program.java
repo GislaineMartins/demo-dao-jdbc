@@ -17,11 +17,11 @@ public class Program {
     public static void main(String[] args) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         
-        Department obj = new Department(1, "Books");
-        Seller s = new Seller(21, "Bob", "bob@gmil.com", new java.sql.Date(sdf.parse("06/06/1990").getTime()), 3000.0, obj);
+       // Seller s = new Seller(21, "Bob", "bob@gmil.com", new java.sql.Date(sdf.parse("06/06/1990").getTime()), 3000.0, obj);
         SellerDao sellerDao = DaoFactory.createSellerDao();
+        Seller seller = sellerDao.findById(3);
+        System.out.println(seller);
         
-        System.out.println(s);
     }
     
 }
