@@ -37,9 +37,15 @@ public class Program {
         }
         
         System.out.println("\n=== TEST 4: seller insert ===="); 
-        Seller newSeller = new Seller(null, "Greg", "greg@gmil.com", new java.sql.Date(sdf.parse("20/01/1995").getTime()), 4000.0, department);
+        Seller newSeller = new Seller(null, "Marcos", "marcos@gmil.com", new java.sql.Date(sdf.parse("22/03/1995").getTime()), 2000.0,department);
         sellerDao.insert(newSeller);
         System.out.println("Inserido! Novo id = "+newSeller.getId());
+        
+        System.out.println("\n=== TEST 4: seller update ===="); 
+        seller = sellerDao.findById(10);
+        seller.setEmail("martinha@gmail.com"); 
+        sellerDao.update(seller);
+        System.out.println("alterado com sucesso");
         
         
     }
