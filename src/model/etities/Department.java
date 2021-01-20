@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author gimcj
+ * @author Gislaine
  */
 public class Department implements Serializable{
     

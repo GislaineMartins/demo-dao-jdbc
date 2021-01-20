@@ -13,7 +13,7 @@ import model.etities.Seller;
 
 /**
  *
- * @author gimcj
+ * @author Gislaine
  */
 public class Program {
     

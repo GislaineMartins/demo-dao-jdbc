@@ -11,7 +11,7 @@ import java.util.Objects;
 
 /**
  *
- * @author gimcj
+ * @author Gislaine
  */
 public class Seller implements Serializable {
     
