@@ -36,6 +36,12 @@ public class Program {
             System.out.println(obj);
         }
         
+        System.out.println("\n=== TEST 4: seller insert ===="); 
+        Seller newSeller = new Seller(null, "Greg", "greg@gmil.com", new java.sql.Date(sdf.parse("20/01/1995").getTime()), 4000.0, department);
+        sellerDao.insert(newSeller);
+        System.out.println("Inserido! Novo id = "+newSeller.getId());
+        
+        
     }
     
 }
