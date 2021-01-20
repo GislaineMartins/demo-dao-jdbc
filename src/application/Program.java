@@ -5,7 +5,11 @@
  */
 package application;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import model.etities.Department;
+import model.etities.Seller;
 
 /**
  *
@@ -13,9 +17,12 @@ import model.etities.Department;
  */
 public class Program {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        
         Department obj = new Department(1, "Books");
-        System.out.println(obj);
+        Seller s = new Seller(21, "Bob", "bob@gmil.com", new java.sql.Date(sdf.parse("06/06/1990").getTime()), 3000.0, obj);
+        System.out.println(s);
     }
     
 }
